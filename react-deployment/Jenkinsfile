@@ -5,7 +5,7 @@ pipeline {
         EC2_HOST = '3.88.223.101'  // Replace with your EC2 public IP
         EC2_DIR = '/home/ec2-user/react-app'  // Define your desired directory on EC2
     }
-    // add stage
+    // add stages
     stages {
         stage('Checkout Code') {
             steps {
