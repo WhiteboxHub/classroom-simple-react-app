@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        EC2_USER = 'ec2-user' // For Amazon Linux, default user is ec2-user
-        EC2_HOST = '3.88.223.101' // Replace with your EC2 public IP
-        EC2_DIR = '/home/ec2-user/react-app' // Desired directory on EC2
+        EC2_USER = 'ec2-user' 
+        EC2_HOST = '3.88.223.101' 
+        EC2_DIR = '/home/ec2-user/react-app' 
     }
     stages {
         stage('Checkout Code') {
