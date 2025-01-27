@@ -12,6 +12,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/WhiteboxHub/UI-Git-EC2.git'
             }
         }
+        // Issue with docker image
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image
