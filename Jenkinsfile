@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout the latest code from your GitHub repository
-                git branch: 'main', url: ''
+                git branch: 'main', url: 'https://github.com/WhiteboxHub/UI-Git-EC2.git'
             }
         }
         stage('Install Dependencies') {
