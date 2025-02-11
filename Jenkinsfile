@@ -17,9 +17,7 @@ pipeline {
             steps {
                 // Build the Docker image
                sh '''
-                      docker build --no-cache -t react-app -f simple-react-app/Dockerfile simple-react-app
-                '''
-
+                      docker build --no-cache -t react-app -f simple-react-app/Dockerfile 
             }
         }
         stage('Push Docker Image to EC2') {
