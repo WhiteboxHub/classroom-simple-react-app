@@ -17,7 +17,8 @@ pipeline {
             steps {
                 // Build the Docker image
                 sh '''
-                    docker build -t react-app -f sample-react-app/Dockerfile .
+                    docker build --no-cache -t react-app -f sample-react-app/Dockerfile .
+                    
 .
                 '''
             }
