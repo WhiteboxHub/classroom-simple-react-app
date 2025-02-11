@@ -16,11 +16,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image
-                sh '''
-                    docker build --no-cache -t react-app -f sample-react-app/Dockerfile .
-                    
-.
+               sh '''
+                      docker build --no-cache -t react-app -f simple-react-app/Dockerfile simple-react-app
                 '''
+
             }
         }
         stage('Push Docker Image to EC2') {
