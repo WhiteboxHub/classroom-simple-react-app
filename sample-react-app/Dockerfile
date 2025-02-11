@@ -5,15 +5,13 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-# Copy package.json and package-lock.json to the working directory
-COPY simple-react-app/package*.json ./
-
+COPY simple-react-app/package*.json ./  
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application files to the working directory
-COPY . .
+COPY simple-react-app/. .
 
 # Build the React app
 RUN npm run build
@@ -21,5 +19,5 @@ RUN npm run build
 # Expose port 3000
 EXPOSE 3000
 
-# Start Nginx
-CMD ["npm,start"]
+# Start the app
+CMD ["npm", "start"]
