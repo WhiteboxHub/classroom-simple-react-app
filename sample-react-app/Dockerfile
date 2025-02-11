@@ -5,7 +5,9 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Copy package.json and package-lock.json to the working directory
+COPY simple-react-app/package*.json ./
+
 
 # Install dependencies
 RUN npm install
