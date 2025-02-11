@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        EC2_USER = 'ec2-user' 
-        EC2_HOST = '3.88.223.101' 
-        EC2_DIR = '/home/ec2-user/react-app' 
+        EC2_USER = 'ec2-user'
+        EC2_HOST = '3.88.223.101'
+        EC2_DIR = '/home/ec2-user/react-app'
     }
     stages {
         stage('Checkout Code') {
@@ -16,8 +16,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image
-               sh '''
-                      docker build --no-cache -t react-app -f simple-react-app/Dockerfile 
+                sh '''
+                    docker build --no-cache -t react-app -f simple-react-app/Dockerfile
+                '''
             }
         }
         stage('Push Docker Image to EC2') {
