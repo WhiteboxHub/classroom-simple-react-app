@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout the latest code from your GitHub repository
-                git branch: 'main', url: 'https://github.com/WhiteboxHub/UI-Git-EC2.git'
+                git branch: 'main', url: 'https://github.com/WhiteboxHub/classroom-simple-react-app.git'
             }
         }
         // Issue with docker image need to resolve
@@ -17,7 +17,8 @@ pipeline {
             steps {
                 // Build the Docker image
                 sh '''
-                    docker build -t react-app .
+                    docker build -t react-app -f sample-react-app/Dockerfile .
+.
                 '''
             }
         }
